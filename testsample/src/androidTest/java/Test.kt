@@ -83,7 +83,7 @@ open class Super
     open var superData = 10
     //접근 지정자 확인, protected만 확인
     //결론, 자식 클래스에서만, 부모 클래스 멤버에 접근 가능 여부 확인
-    //즉 main 함수에서는 접근 불가
+    //즉 com.example.ExTest0221.main 함수에서는 접근 불가
     protected var protectedData = 20;
 
     open fun superFun()

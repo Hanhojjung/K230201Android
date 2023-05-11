@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button18"
+        android:layout_width="69dp"
+        android:layout_height="59dp"
+        android:text="#"
+        android:textColor="#515151"
+        android:backgroundTint="@color/white"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="253dp"
+        tools:layout_editor_absoluteY="427dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -12,7 +24,156 @@
         android:text="Hello World!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.544"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.158" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="50dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:srcCompat="@drawable/video"
+        tools:layout_editor_absoluteY="519dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="51dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/back"
+        tools:layout_editor_absoluteX="271dp"
+        tools:layout_editor_absoluteY="518dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="53dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="36dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:srcCompat="@drawable/call"
+        tools:layout_editor_absoluteY="518dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="69dp"
+        android:layout_height="59dp"
+        android:text="3"
+        android:textColor="#515151"
+        android:backgroundTint="@color/white"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="251dp"
+        tools:layout_editor_absoluteY="205dp" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="69dp"
+        android:layout_height="59dp"
+        android:text="2"
+        android:textColor="#515151"
+        android:backgroundTint="@color/white"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="171dp"
+        tools:layout_editor_absoluteY="205dp" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="69dp"
+        android:layout_height="59dp"
+        android:text="1"
+        android:textColor="#515151"
+        android:backgroundTint="@color/white"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="205dp" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="69dp"
+        android:layout_height="59dp"
+        android:text="4"
+        android:textColor="#515151"
+        android:backgroundTint="@color/white"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="280dp" />
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="69dp"
+        android:layout_height="59dp"
+        android:text="7"
+        android:textColor="#515151"
+        android:backgroundTint="@color/white"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="355dp" />
+
+    <Button
+        android:id="@+id/button16"
+        android:layout_width="69dp"
+        android:layout_height="59dp"
+        android:text="*"
+        android:textColor="#515151"
+        android:backgroundTint="@color/white"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="427dp" />
+
+    <Button
+        android:id="@+id/button17"
+        android:layout_width="69dp"
+        android:layout_height="59dp"
+        android:text="0"
+        android:textColor="#515151"
+        android:backgroundTint="@color/white"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="171dp"
+        tools:layout_editor_absoluteY="427dp" />
+
+    <Button
+        android:id="@+id/button14"
+        android:layout_width="69dp"
+        android:layout_height="59dp"
+        android:text="8"
+        android:textColor="#515151"
+        android:backgroundTint="@color/white"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="171dp"
+        tools:layout_editor_absoluteY="355dp" />
+
+    <Button
+        android:id="@+id/button15"
+        android:layout_width="69dp"
+        android:layout_height="59dp"
+        android:text="9"
+        android:textColor="#515151"
+        android:backgroundTint="@color/white"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="253dp"
+        tools:layout_editor_absoluteY="355dp" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="69dp"
+        android:layout_height="59dp"
+        android:text="5"
+        android:textColor="#515151"
+        android:backgroundTint="@color/white"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="171dp"
+        tools:layout_editor_absoluteY="280dp" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="69dp"
+        android:layout_height="59dp"
+        android:text="6"
+        android:textColor="#515151"
+        android:backgroundTint="@color/white"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="251dp"
+        tools:layout_editor_absoluteY="280dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

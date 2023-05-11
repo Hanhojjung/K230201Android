@@ -13,14 +13,19 @@
         android:layout_height="wrap_content"
         android:text="한호정"
         android:textSize="30sp"
-        android:textColor="#F44336"
+        android:textColor="#C089FF"
         />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/san1" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!"
-        android:textColor="#F44336"
+        android:textColor="#B136F4"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

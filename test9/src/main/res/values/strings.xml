@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Test9</string>
-    <string name="test">반복적으로 사용되는 문자열을 재사용합니다.</string>
+    <string name="appDesc">desc</string>
+    <string name="test" translatable="false">Reuse strings that are used repeatedly.</string>
 </resources>

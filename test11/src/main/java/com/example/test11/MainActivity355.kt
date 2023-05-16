@@ -26,6 +26,7 @@ class MainActivity355 : AppCompatActivity() {
         for(i in 1..3){
             datas.add("Item $i")
         }
+        //뷰페이지2 설정 방식 중에서 프래그먼트 방식의 어댑터 설정 및 적용
         val adapter= MyFragmentPagerAdapter(this)
         binding.viewpager.adapter = adapter
     }
@@ -33,6 +34,7 @@ class MainActivity355 : AppCompatActivity() {
     class MyFragmentPagerAdapter(activity: FragmentActivity): FragmentStateAdapter(activity){
         val fragments: List<Fragment>
         init {
+            //MyFragmentPagerAdapter 생성자 호출시 마다, 항상 실행되는 코드 부분
             fragments= listOf(OneFragment(), TwoFragment(), ThreeFragment())
             Log.d("kkang" ,"fragments size : ${fragments.size}")
         }

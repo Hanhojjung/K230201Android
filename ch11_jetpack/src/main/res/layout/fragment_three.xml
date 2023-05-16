@@ -11,7 +11,7 @@
         android:textSize="20dp"
         android:textStyle="bold"
         android:gravity="center"
-        android:text="TwoFragment!!"
-        android:background="#FF00FF"
+        android:text="Three Fragment!!"
+        android:background="#FEA400"
         android:textColor="#FFFFFF"/>
 </LinearLayout>

@@ -22,6 +22,7 @@ class MainActivity354 : AppCompatActivity() {
         for(i in 1..3){
             datas.add("Item $i")
         }
+        //뷰페이지2, 구성하는 방식이 기존의 리사이클러 뷰의 어댑터 방식을 채용하고 있음
         binding.viewpager.adapter=MyPagerAdapter(datas)
     }
 

@@ -16,8 +16,17 @@ import com.example.test11.databinding.Item342Binding
 //리사이클러뷰를 다른 액티비티에서 재활용 될 예정
 class MainActivity4 : AppCompatActivity() {
     //뷰 홀더 만들기 -> Item342Binding 바인딩
+    //여기에 항목은 목록의 구성 요소들의 뷰 객체를 모아 두었다.
+    // 샘플로 텍스트 뷰 한개만 구성됨. Item342Binding
     class MyViewHolder (val binding: Item342Binding) : RecyclerView.ViewHolder(binding.root)
     //어댑터 만들기
+    //데이터 연동 -> 현재 임시 데이터 리스트 9개 값을 -> 해당 뷰 홀더의 아이템 요소의 값으로 사용.
+    //나중에, 텍스트, 이미지 등 여러 데이터를 해당 뷰에 할당 작업.
+    //보통 데이터는 AIP 서버에서 받아온 값(중간 데이터로 JSON 형식으로 받아서, 필요한 요소만 사용할 예정.)
+    //예를 들어, 공공 데이터, 한 아이템의 요소의 값이 10개 있으면, 그 중에서 4개 정도 선택한다.
+    //썸네일 이미지 1개, 제목 1개, 위치 1개, 전화번호 1개
+    //해당 뷰에 하나씩 재할당 함.
+
     class MyAdapter(var datas : MutableList<String>) : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
         //필수적으로 재정의 -> 자동완성
         //재정의 한 함수는 다 자동 호출, 순서 상관x
@@ -65,7 +74,7 @@ class MainActivity4 : AppCompatActivity() {
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         //2.틀에 해당 어댑터 붙이기
         binding.recyclerView.adapter = MyAdapter(datas)
-        //3.아이텝 간의 구분선
+        //3.아이템 간의 구분선
         binding.recyclerView.addItemDecoration(
             DividerItemDecoration(this, LinearLayoutManager.VERTICAL)
         )

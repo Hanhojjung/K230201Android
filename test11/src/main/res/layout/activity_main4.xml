@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--부모 태그의 리사이클러뷰-->
+<!--아이디 속성 추가, 목록이 출력되는 틀-->
+<androidx.recyclerview.widget.RecyclerView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/recyclerView"
+    android:layout_width="match_parent"
+    android:layout_height="0dp">
+
+</androidx.recyclerview.widget.RecyclerView>

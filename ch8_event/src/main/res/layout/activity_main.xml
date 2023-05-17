@@ -11,25 +11,33 @@
     <Button
         android:id="@+id/button"
         android:layout_width="110dp"
-        android:layout_height="50p"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="44dp"
         android:text="START"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="631dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="110dp"
-        android:layout_height="50p"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="44dp"
         android:text="STOP"
-        tools:layout_editor_absoluteX="278dp"
-        tools:layout_editor_absoluteY="631dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button3" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="110dp"
-        android:layout_height="50p"
+        android:layout_height="50dp"
+        android:layout_marginBottom="44dp"
         android:text="RESET"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="631dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="168dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

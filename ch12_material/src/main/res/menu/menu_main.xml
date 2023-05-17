@@ -5,7 +5,7 @@
     <item
         android:title="searching"
         app:showAsAction="always"
-        android:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"/>
 
-        />
+    <item android:title="setting"/>
 </menu>

@@ -16,6 +16,19 @@ class MainActivity389 : AppCompatActivity() {
         val binding = ActivityMain389Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // 플로팅 액션바, 화면에 마치 둥둥 떠있는 버튼 연상.
+        // 구글의 머터리얼 디자인에서 나온 기능을 가져다 사용 중.
+        // 마치 부트스트랩에서 특정 뷰를 가져와 사용하는 것과 거의 비슷
+        // 다만 이벤트 처리 부분이 좀 더 길다.
+
+        binding.fbtn.setOnClickListener{
+            when(binding.fbtn.isExtended) {
+                true -> binding.fbtn.shrink()
+                false -> binding.fbtn.extend()
+            }
+        }
+
+
         // 개발자가 만든  툴바를 직접 설정. 넣기
         setSupportActionBar(binding.toolbar)
 

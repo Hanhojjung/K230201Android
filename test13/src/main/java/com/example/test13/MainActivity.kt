@@ -28,8 +28,9 @@ class MainActivity : AppCompatActivity() {
             // 여기의 값은 개발자가 아무거나 입력해도 상관없음
             //ACTION_EDIT 정의가 된 게 없음
             //변경 : Intent.ACTION_VIEW : 등록된 액션으로 변경
-            intent.action = Intent.ACTION_VIEW
-            intent.data = Uri.parse("http://google.com")
+            intent.action = "ACTION_EDIT"
+//            intent.action = Intent.ACTION_VIEW
+//            intent.data = Uri.parse("http://google.com")
             // 인텐트 setpackage 잠시 보류.
             startActivity(intent)
 

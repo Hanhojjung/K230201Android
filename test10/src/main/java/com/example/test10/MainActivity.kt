@@ -1,12 +1,16 @@
 package com.example.test10
 
+import android.app.AlertDialog
 import android.app.DatePickerDialog
+import android.app.TimePickerDialog
+import android.content.DialogInterface
 import android.content.pm.PackageManager
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.DatePicker
+import android.widget.TimePicker
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContract
 import androidx.activity.result.contract.ActivityResultContracts
@@ -15,6 +19,19 @@ import androidx.core.content.ContextCompat
 import com.example.test10.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    //경고창 다이얼로그에서, 확인 시 수행하는 기능을 추가시
+    // DialogInterface.OnclickListener 구현한 함수가 필요함.
+    // 그래서 따로 만들어서 설정
+    val eventHandler = object : DialogInterface.OnClickListener{
+        override fun onClick(dialog: DialogInterface?, which: Int) {
+            if(which == DialogInterface.BUTTON_POSITIVE){
+                Toast.makeText(this@MainActivity,"확인시 띄우기",Toast.LENGTH_SHORT).show()
+            } else if(which == DialogInterface.BUTTON_NEGATIVE) {
+                Toast.makeText(this@MainActivity,"취소시 띄우기",Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
     @RequiresApi(Build.VERSION_CODES.R)
     fun  showTest() {
         val toast = Toast.makeText(this,"메세지 내용",Toast.LENGTH_SHORT)
@@ -39,6 +56,76 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // 다이얼로그에 체크박스 선택 부분 해보기.
+        binding.btnCheck.setOnClickListener {
+            val items = arrayOf<String>("두루치기","된장찌개","밀면","칼국수")
+            AlertDialog.Builder(this@MainActivity).run {
+                setTitle("checkBox alert 다이얼로그")
+                setIcon(android.R.drawable.ic_dialog_info)
+                setMultiChoiceItems(
+                    items,
+                    booleanArrayOf(true,false,false,false),
+                    object : DialogInterface.OnMultiChoiceClickListener{
+                        override fun onClick(
+                            dialog: DialogInterface?,
+                            which: Int,
+                            isChecked: Boolean
+                        ) {
+                            Log.d("lsy",
+                                "선택한 점심 메뉴 : ${items[which]} 이 ${if(isChecked)"선택됨." 
+                                else "선택 해제됨."}"
+                                     )
+                        }
+                    }
+                )
+                setPositiveButton("닫기",null)
+                show()
+            }
+        }
+
+        // 다이얼로그에 메뉴 선택 부분 확인 해보기.
+        binding.btnMenu.setOnClickListener {
+            val items = arrayOf<String>("두루치기","된장찌개","밀면","칼국수")
+            AlertDialog.Builder(this@MainActivity).run {
+                setTitle("메뉴 alert 다이얼로그")
+                setIcon(android.R.drawable.ic_dialog_info)
+                setItems(
+                    items,
+                    object : DialogInterface.OnClickListener{
+                        override fun onClick(dialog: DialogInterface?, which: Int) {
+                            Log.d("lsy","선택한 점심 메뉴 : ${items[which]}")
+                        }
+                    }
+                )
+                setPositiveButton("닫기",null)
+                show()
+            }
+        }
+
+
+        // 경고창, 특정 정보를 띄워서, 확인 시 동작 기능, 취소 시 동작.
+        // 설정한 eventHandler 변수에 담긴, 익명 함수를 사용함.
+        binding.btnAlert.setOnClickListener {
+            AlertDialog.Builder(this@MainActivity).run {
+                setTitle("테스트 제목")
+                setIcon(android.R.drawable.ic_dialog_info)
+                setMessage("토스트 메시지 띄울까요?")
+                setPositiveButton("확인",eventHandler)
+                setNegativeButton("취소",eventHandler)
+                show()
+            }
+        }
+
+        //시간 다이얼로그 띄우기
+        binding.btnTime.setOnClickListener {
+            //TimePickerDialog(this, 익명클래스, 시간, 분, 24시 표시 여부).show()
+            TimePickerDialog(this,object : TimePickerDialog.OnTimeSetListener{
+                override fun onTimeSet(view: TimePicker?, hourOfDay: Int, minute: Int) {
+                    Log.d("lsy","hourOfDay(시간): ${hourOfDay}시,minute : ${minute}분 ")
+                }
+            },15,10,true).show()
+        }
 
         //날짜 다이얼로그 띄우기, 출력은 콘솔 또는 토스트 메시지
         binding.btnDate.setOnClickListener{

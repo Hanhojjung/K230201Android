@@ -22,4 +22,10 @@
         android:text="Main Activitiy"
         android:textSize="30sp"/>
 
+    <TextView
+        android:id="@+id/resultMainViewText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="30sp"/>
 </LinearLayout>

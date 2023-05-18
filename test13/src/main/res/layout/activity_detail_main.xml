@@ -8,11 +8,24 @@
     android:orientation="vertical"
     tools:context=".DetailMainActivity">
 
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="후처리 테스트"
+        android:textSize="30sp"/>
     <TextView
         android:id="@+id/detailViewText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Detail Activitiy"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/resultViewText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
         android:textSize="30sp"/>
 
 </LinearLayout>

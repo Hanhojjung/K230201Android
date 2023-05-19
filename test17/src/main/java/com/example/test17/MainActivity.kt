@@ -9,6 +9,8 @@ import com.example.test17.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
+
+    //참고코드 -> ch17_database -> 할일 목록 만들기, 할일 내용을 데이터베이스에 저장
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)

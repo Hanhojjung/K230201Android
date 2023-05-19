@@ -5,11 +5,15 @@ import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.content.DialogInterface
 import android.content.pm.PackageManager
+import android.media.MediaPlayer
+import android.media.RingtoneManager
+import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.DatePicker
+import android.widget.MediaController
 import android.widget.TimePicker
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContract
@@ -50,12 +54,34 @@ class MainActivity : AppCompatActivity() {
         )
         toast.show()
     }
+
+
     @RequiresApi(Build.VERSION_CODES.R)
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        //샘플 영상 확인 작업
+        binding.btnVideo.setOnClickListener {
+            val videofile : Uri = Uri.parse("android.resource://"+packageName+"/raw/test")
+          /*  val player : MediaPlayer = MediaPlayer.create(this@MainActivity,R.raw.test)
+            player.start()*/
+
+            val mc = MediaController(this) // 비디오 컨트롤 가능하게(일시정지, 재시작 등)
+
+            binding.videoView.setMediaController(mc)
+            binding.videoView.setVideoPath(videofile.toString())
+            binding.videoView.start()
+        }
+
+        // 소리 부분 확인 작업.
+        binding.btnSound.setOnClickListener {
+            val notification : Uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
+            val ringtone = RingtoneManager.getRingtone(applicationContext,notification)
+            ringtone.play()
+        }
 
         // 다이얼로그에 체크박스 선택 부분 해보기.
         binding.btnCheck.setOnClickListener {
@@ -80,8 +106,9 @@ class MainActivity : AppCompatActivity() {
                     }
                 )
                 setPositiveButton("닫기",null)
+                setCancelable(true)
                 show()
-            }
+            }.setCanceledOnTouchOutside(true)
         }
 
         // 다이얼로그에 메뉴 선택 부분 확인 해보기.

@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
 
         //참고코드 MainActivity
             //여기에는 1) 후처리, 2) 특정의 퍼미션의 결과를 받을 수 있다.
+        //registerForActivityResult은 활동 결과 콜백을 등록하기 위해 사용되는 함수
         requestPermissionLauncher = registerForActivityResult(
             ActivityResultContracts.RequestMultiplePermissions()
         ) {

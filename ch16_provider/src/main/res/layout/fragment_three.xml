@@ -15,6 +15,7 @@
         android:text="가입하기"/>
 
     <EditText
+        android:id="@+id/editTextName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="130dp"
@@ -22,6 +23,7 @@
         android:inputType="text"/>
 
     <EditText
+        android:id="@+id/editEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="180dp"
@@ -29,6 +31,7 @@
         android:inputType="textEmailAddress"/>
 
     <EditText
+        android:id="@+id/editPass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="230dp"
@@ -36,9 +39,51 @@
         android:inputType="textPassword"/>
 
     <Button
+        android:id="@+id/buttonInsert"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="280dp"
         android:text="가입하기"/>
+
+    <Button
+        android:id="@+id/buttonView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="350dp"
+        android:text="보여주기"
+
+         />
+
+    <Button
+        android:id="@+id/buttonUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="350dp"
+        android:text="수정하기" />
+
+    <EditText
+        android:id="@+id/editTextID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="400dp"
+        android:textSize="10sp"
+        android:hint="수정 및 삭제 시 여기에 ID를 입력해주세요"
+        android:ems="10"
+        android:inputType="textPersonName"
+
+         />
+
+    <Button
+        android:id="@+id/buttonDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="350dp"
+        android:text="삭제"
+         />
+
 
 </FrameLayout>

@@ -1,4 +1,4 @@
-package com.example.test18_newsapi
+package com.example.test18_pdtest_pdtesti_newsapi
 
 import android.content.Context
 import android.os.Bundle
@@ -8,9 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.test18_newsapi.databinding.FragmentRetrofitBinding
-import com.example.test18_newsapi.model.PageListModel
-import com.example.test18_newsapi.recycler.MyAdapter
+import com.example.test18_pdtest_pdtesti_newsapi.databinding.FragmentRetrofitBinding
+import com.example.test18_pdtest_pdtesti_newsapi.model.PageListModel
+import com.example.test18_pdtest_pdtesti_newsapi.recycler.MyAdapter
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

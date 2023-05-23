@@ -1,4 +1,4 @@
-package com.example.test18_newsapi
+package com.example.test18_pdtest_pdtesti_newsapi
 
 import android.content.Context
 import android.os.Bundle
@@ -12,9 +12,9 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
-import com.example.test18_newsapi.databinding.FragmentVolleyBinding
-import com.example.test18_newsapi.model.ItemModel
-import com.example.test18_newsapi.recycler.MyAdapter
+import com.example.test18_pdtest_pdtesti_newsapi.databinding.FragmentVolleyBinding
+import com.example.test18_pdtest_pdtesti_newsapi.model.ItemModel
+import com.example.test18_pdtest_pdtesti_newsapi.recycler.MyAdapter
 import org.json.JSONObject
 
 

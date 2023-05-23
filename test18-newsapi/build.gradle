@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.test18_newsapi'
+    namespace 'com.example.test18_pdtest_pdtesti_newsapi'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.test18_newsapi"
+        applicationId "com.example.test18_pdtest_pdtesti_newsapi"
         minSdk 24
         targetSdk 33
         versionCode 1

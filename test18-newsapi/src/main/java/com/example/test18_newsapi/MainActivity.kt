@@ -1,10 +1,10 @@
-package com.example.test18_newsapi
+package com.example.test18_pdtest_pdtesti_newsapi
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import com.example.test18_newsapi.databinding.ActivityMainBinding
+import com.example.test18_pdtest_pdtesti_newsapi.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 /*    초반 빌드 작업

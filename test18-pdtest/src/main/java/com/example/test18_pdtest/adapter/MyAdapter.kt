@@ -1,5 +1,4 @@
-package com.example.test18.adapter
-
+package com.example.test18_pdtest.adapter
 import android.content.Context
 import android.graphics.BitmapFactory
 import android.graphics.Color
@@ -10,9 +9,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.core.view.ViewCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.example.test18.Model.UserModel
-import com.example.test18.MyApplication
-import com.example.test18.databinding.ItemRetrofitBinding
+import com.example.test18_pdtest.Model.UserModel
+
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Callback
@@ -34,12 +32,12 @@ class MyAdapter(val context: Context, val datas: List<UserModel>?): RecyclerView
         // datas -> List<UserModel> 한 요소가, 한 멤버의 객체입니다.
         val user = datas?.get(position)
         //받아온 데이터를 사용 다 안함
-        binding.id.text=user?.id
-        binding.firstNameView.text=user?.firstName
-        binding.lastNameView.text=user?.lastName
-        binding.emailView.text =user?.email
+        //제목, 썸네일 이미지 사용할 예정
+        binding.id.text=user?.title
 
-        user?.avatar?.let {
+//        binding.emailView.text =user?.email
+
+        user?.mainImgThumb?.let {
             val avatarImageCall = (context.applicationContext as MyApplication).networkService.getAvatarImage(it)
             avatarImageCall.enqueue(object : Callback<ResponseBody> {
                 override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {

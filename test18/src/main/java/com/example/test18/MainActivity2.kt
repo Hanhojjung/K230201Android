@@ -13,22 +13,23 @@ class MainActivity2 : AppCompatActivity() {
     lateinit var binding: ActivityMain2Binding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = ActivityMain2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // 예제1
-        // image 결과 뷰를 넣을 뷰 만들기.
-       /* Glide.with(this)
-            //이미지의 출발지.res -> drawable
-            .load(R.drawable.san4)
-            .into(binding.resultView)*/
+        //image 결과 뷰를 넣을 뷰 만들기.
+        //예제1
+//        Glide.with(this)
+//                // 이미지의 출발지, res -> drawable
+//            .load(R.drawable.lavar)
+//            .into(binding.resultView)
 
         // 예제2
-        // 파일에서 선택한 이미지 출력하기. 후처리
+        // 파일에서 선택한 이미지 출력하기.  후처리.
         val requestLauncher = registerForActivityResult(
             ActivityResultContracts.StartActivityForResult()
-        ){
-            Log.d("lsy","it.data.data의 값이 뭔가요 : ${it.data?.data}")
+        ) {
+            Log.d("lsy","it.data.data의 값이 뭔가요: ${it.data?.data}")
             Glide.with(this)
                 .load(it.data?.data)
                 .override(200,200)

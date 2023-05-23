@@ -1,4 +1,4 @@
-package com.example.test18_newsapi.model
+package com.example.test18_pdtest_pdtesti_newsapi.model
 
 class ItemModel {
     var id: Long = 0

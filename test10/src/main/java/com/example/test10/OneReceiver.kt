@@ -8,6 +8,6 @@ class OneReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
         // This method is called when the BroadcastReceiver is receiving an Intent broadcast.
-        TODO("OneyReceiver.onReceive() is not implemented")
+        TODO("OneReceiver.onReceive() is not implemented")
     }
 }

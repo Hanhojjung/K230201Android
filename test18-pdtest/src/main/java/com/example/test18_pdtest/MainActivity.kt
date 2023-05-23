@@ -1,19 +1,18 @@
-package com.example.test18_pdtest
+
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.test18.Model.UserListModel
-import com.example.test18.adapter.MyAdapter
-import com.example.test18_pdtest.databinding.ActivityMainBinding
+
+
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
-    lateinit var binding : ActivityMainBinding
+    lateinit var binding = ActivityMainBinding
     /*공공데이터 API
     부산맛집 정보 서비스
     가입 후, 로그인, 해당 요청 정보에서, API 키 발급 신청
@@ -36,7 +35,7 @@ class MainActivity : AppCompatActivity() {
 
         val networkService = (applicationContext as MyApplication).networkService
 
-        val userListCall = networkService.doGetUserList("1")
+        val userListCall = networkService.doGetUserList("ILEuvHedm5Mts3ZpudoU8a9%2BDdaOwoecKJOjXjU%2B9ojDsxSn8dG%2BRugXbJrL4r4biQE3pvzrt4mCSa1caDW8Vw%3D%3D",10,1,"JSON")
         Log.d("kkang", "url:" + userListCall.request().url().toString())
 
         userListCall.enqueue(object : Callback<UserListModel> {
@@ -46,17 +45,17 @@ class MainActivity : AppCompatActivity() {
             ) {
 
                 val userList = response.body()
-                Log.d("lsy","Test18 userList data 값 : ${userList?.data}")
+                Log.d("lsy","Test18 userList item 값 : ${userList?.item}")
 
                 //.......................................
 
-                binding.recyclerView.adapter = MyAdapter(this@MainActivity, userList?.data)
+                binding.recyclerView.adapter = MyAdapter(this@MainActivity, userList?.item)
                 binding.recyclerView.addItemDecoration(
                     DividerItemDecoration(this@MainActivity, LinearLayoutManager.VERTICAL)
                 )
 
-                binding.pageView.text = userList?.page
-                binding.totalView.text = userList?.total
+/*                binding.pageView.text = userList?.page
+                binding.totalView.text = userList?.total*/
             }
 
             override fun onFailure(call: Call<UserListModel>, t: Throwable) {

@@ -1,6 +1,6 @@
-package com.example.test18_newsapi.retrofit
+package com.example.test18_pdtest_pdtesti_newsapi.retrofit
 
-import com.example.test18_newsapi.model.PageListModel
+import com.example.test18_pdtest_pdtesti_newsapi.model.PageListModel
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query

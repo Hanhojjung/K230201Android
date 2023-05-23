@@ -1,7 +1,7 @@
-package com.example.test18_newsapi
+package com.example.test18_pdtest_pdtesti_newsapi
 
 import android.app.Application
-import com.example.test18_newsapi.retrofit.NetworkService
+import com.example.test18_pdtest_pdtesti_newsapi.retrofit.NetworkService
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

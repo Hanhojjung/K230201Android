@@ -1,12 +1,12 @@
-package com.example.test18_newsapi.recycler
+package com.example.test18_pdtest_pdtesti_newsapi.recycler
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.test18_newsapi.databinding.ItemMainBinding
-import com.example.test18_newsapi.model.ItemModel
+import com.example.test18_pdtest_pdtesti_newsapi.databinding.ItemMainBinding
+import com.example.test18_pdtest_pdtesti_newsapi.model.ItemModel
 
 
 class MyViewHolder(val binding: ItemMainBinding): RecyclerView.ViewHolder(binding.root)

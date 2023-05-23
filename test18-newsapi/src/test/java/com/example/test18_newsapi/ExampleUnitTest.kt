@@ -1,4 +1,4 @@
-package com.example.test18_newsapi
+package com.example.test18_pdtest_pdtesti_newsapi
 
 import org.junit.Test
 

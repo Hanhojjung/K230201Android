@@ -237,7 +237,7 @@ mapOf<String,String>("one" to "hi", "two" to "hi2"),
 
 예시3)
 서버 입장에서는
-https://reqres.in/users?one=hi&two=hi2@name=lsy
+https://reqres.in/users?one=hi&two=hi2&name=lsy
 
 =======================================================
 @Body

@@ -18,6 +18,7 @@ interface INetworkService {
     @GET
     fun getAvatarImage(@Url url: String): Call<ResponseBody>
 
-    @GET("users/list?sort=desc")
+//    @GET("users/list?sort=desc")
+    @GET("/api/users/2")
     fun test1(): Call<UserModel>
 }

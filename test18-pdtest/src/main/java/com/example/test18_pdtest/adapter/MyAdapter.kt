@@ -10,6 +10,8 @@ import android.widget.ImageView
 import androidx.core.view.ViewCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.test18_pdtest.Model.UserModel
+import com.example.test18_pdtest.MyApplication
+import com.example.test18_pdtest.databinding.ItemRetrofitBinding
 
 import okhttp3.ResponseBody
 import retrofit2.Call
